@@ -1,0 +1,25 @@
+﻿<Window x:Class="WarehouseApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Склад" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- показ данных -->
+        <DataGrid x:Name="DataGrid" Grid.Row="0" Margin="10" AutoGenerateColumns="True"/>
+
+        <!-- кнопки упр -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+            <Button Content="Товары" Margin="5" Padding="10" Click="ShowProducts_Click"/>
+            <Button Content="Категории" Margin="5" Padding="10" Click="ShowCategories_Click"/>
+            <Button Content="Поставщики" Margin="5" Padding="10" Click="ShowSuppliers_Click"/>
+            <Button Content="Приход" Margin="5" Padding="10" Click="Income_Click" Background="Gray"/>
+            <Button Content="Расход" Margin="5" Padding="10" Click="Outcome_Click" Background="Gray"/>
+            <Button Content="Обновить" Margin="5" Padding="10" Click="Refresh_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
